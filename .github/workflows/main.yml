@@ -34,4 +34,4 @@ jobs:
             --delete
 
       - name: Deployment logs
-        run: echo "Deployed to S3 bucket: ${{ secrets.S3_BUCKET }} at $(date)"
+        run: echo "Deployed to S3 bucket: cicdforfitness at $(date)"
