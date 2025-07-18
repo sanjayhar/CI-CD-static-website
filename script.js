@@ -118,4 +118,8 @@ bodyPartTabs.forEach(tab => {
 });
 
 // Initial render
+<<<<<<< HEAD
 renderWorkouts();
+=======
+renderWorkouts();
+>>>>>>> 415f32f0987564c3fcd4e1fafc1035440f7d7307
