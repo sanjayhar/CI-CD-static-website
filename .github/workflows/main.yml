@@ -1,4 +1,4 @@
-name: Deploy Static Website to AWS S3
+name: 🚀 Deploy Static Website to AWS S3
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: AKIAYFOD3NMDGOMAMWVA
-          aws-secret-access-key: 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
-          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Upload to S3 bucket
         run: |
-          aws s3 sync . s3://cicdforfitness
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
